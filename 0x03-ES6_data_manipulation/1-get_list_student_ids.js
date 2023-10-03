@@ -1,8 +1,5 @@
-export default function getListStudentIds(arr) {
-  if (!Array.isArray(arr)) return [];
-  const idArr = [];
-  for (const x of arr) {
-    idArr.push(x.id);
-  }
-  return idArr;
+// eslint-disable-next-line consistent-return
+export default function getListStudentIds(arg) {
+  if (!Array.isArray(arg)) return [];
+  return arg.map((el) => el.id);
 }
