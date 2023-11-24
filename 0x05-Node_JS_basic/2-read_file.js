@@ -14,7 +14,7 @@ function countStudents(path) {
           firstname,
           lastname,
           age,
-          field
+          field,
         });
       }
     }
@@ -43,7 +43,7 @@ function countStudents(path) {
         console.log(
           `Number of students in ${field}: ${
             fields[field].length
-          }. List: ${fields[field].join(', ')}`
+          }. List: ${fields[field].join(',')}`
         );
       }
     }
