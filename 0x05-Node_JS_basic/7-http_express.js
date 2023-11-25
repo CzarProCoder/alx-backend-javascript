@@ -1,13 +1,16 @@
 const express = require('express');
+const countStudents = require('./3-read_file_async');
+
+const database = process.argv[2];
 
 const app = express();
 const port = 1245;
 
-app.get('/', (req, res) => {
-  res.send('Hello Holberton School!');
+app.get('/', (request, response) => {
+  response.send('Hello Holberton School!');
 });
 
-app.get('/students', async (req, res) => {
+app.get('/students', async (request, response) => {
   try {
     const data = await countStudents(database);
     if (data) {
@@ -22,6 +25,6 @@ app.get('/students', async (req, res) => {
   }
 });
 
-app.listen(port);
+app.listen(port, () => {});
 
 module.exports = app;
