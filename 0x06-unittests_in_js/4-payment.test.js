@@ -3,7 +3,7 @@ const { it, describe } = require('mocha');
 const sinon = require('sinon');
 
 const Utils = require('./utils.js');
-const sendPaymentRequestToApi = require('./3-payment.js');
+const sendPaymentRequestToApi = require('./4-payment.js');
 
 describe('', () => {
   const checkSoy = sinon.spy(console, 'log');
